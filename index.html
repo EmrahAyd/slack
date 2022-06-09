@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    
+
+
+
+
+
+<button type="button" class="btn" style="background-image: linear-gradient(rgb(0, 217, 255), rgba(17, 43, 9, 0.856)); color:rgb(255, 255, 255); font-size:large; font-weight: bolder;"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+    İletişim Formu
+  </button>
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">İletişim Bilgilerinizi Giriniz.</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="https://hooks.zapier.com/hooks/catch/12698472/barqt3d/?contact=nameim" method="post" target="_blank" onsubmit="rasda()" >
+                <input type="text" required="required" class="form-control" id="First" name="First" autocomplete="off" placeholder="Adınız Soyadınız"><br>
+
+                <input type="email" required="required" class="form-control" id="Mail"  name="Mail" autocomplete="off" placeholder="Mail Adresiniz"><br>
+
+
+
+                <input type="text"  required="required" pattern="[5][0-9]{9}" class="form-control" autocomplete="off" id="Tel" name="Tel" placeholder="Telefon numaranızı başında '0' olmadan yazın."><br>
+
+
+                <input type="submit" value="Gönder"class="btn" style="background-image: linear-gradient(rgb(0, 217, 255), rgba(17, 43, 9, 0.856));color:rgb(255, 255, 255); font-size:large; font-weight: bolder;">
+
+
+                <button type="button" id="clse" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+</body>
+<script>
+    const rasda = () => {
+        if(document.querySelector('#First').value == ""){
+            alert("Adınızı ve Soyadınızı giriniz.");
+        }
+        else if(document.querySelector('#Mail').value == ""){
+            alert("Mail adresinizi giriniz.");
+        }
+        else if(document.querySelector('#Tel').value == ""){
+            alert("Telefon numaranızı giriniz.");
+        }
+        else{
+            alert("Sayın " + document.querySelector("#First").value + 'Formunuz başarıyla gönderildi.');
+            document.querySelector('#clse').click();
+        setTimeout(function(){
+            window.location = "https://emrahaydin.dev/"
+                }, 5000);
+
+    }}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+</html>
+
+
